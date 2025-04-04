@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# 🚀 Práticas com React Hooks e Componentização
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém atividades práticas desenvolvidas com foco no uso de **React Hooks** e boas práticas de **componentização**, voltadas para reforçar os conceitos fundamentais do ciclo de vida de componentes em React.
 
-Currently, two official plugins are available:
+## 📚 Conteúdo das Atividades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+As atividades estão organizadas para demonstrar, de forma clara e objetiva, o uso dos principais recursos do React:
 
-## Expanding the ESLint configuration
+### ✅ useState
+- Controle de estado de variáveis no componente.
+- Exemplo: contadores, formulários e controle de visibilidade.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ✅ useEffect
+- Efeitos colaterais e ações com base no ciclo de vida.
+- Exemplos: timers, requisições, limpeza de efeitos.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### ✅ useRef
+- Referência a elementos DOM e persistência de valores entre renderizações.
+- Exemplo: foco em inputs e armazenamento de valores mutáveis.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ✅ useMemo
+- Otimização de renderizações com memorização de valores.
+- Exemplo: cálculos pesados ou listas filtradas.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ Ciclo de Vida
+- Simulação dos métodos `componentDidMount`, `componentDidUpdate` e `componentWillUnmount` com `useEffect`.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### ✅ Componentização
+- Divisão do código em componentes reutilizáveis e organizados.
+- Padrões de boas práticas na estrutura de arquivos e pastas.
+
+## 🛠️ Tecnologias Utilizadas
+
+- React (com Vite ou CRA)
+- JavaScript
+- Hooks API
+- HTML/CSS básico (estilização simples)
+
+## 🧪 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Rode o projeto:
+   ```bash
+   npm run dev
+   ```
+
+## 📁 Organização
+
+- `src/components/`: Componentes reutilizáveis
+- `src/pages/`: Páginas com exemplos práticos
+- `src/hooks/`: Hooks customizados (se aplicável)
+
+## 📌 Objetivo
+
+Reforçar o aprendizado prático sobre:
+- Gerenciamento de estado e efeitos colaterais
+- Organização de componentes
+- Performance e reutilização de lógica
+
+## ✍️ Autor
+
+Desenvolvido por [Seu Nome].  
+Sinta-se à vontade para contribuir ou utilizar como referência de estudos.
+
+---
