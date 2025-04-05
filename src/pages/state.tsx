@@ -1,5 +1,5 @@
-import { CountState } from "../components/countState";
-import { ArrayState } from "../components/arrayState";
+import { CountState } from "../components/stateCount";
+import { ArrayState } from "../components/stateArray";
 
 export function State() {
   return (

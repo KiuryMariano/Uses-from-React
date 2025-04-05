@@ -1,5 +1,5 @@
-import  TimerSimples from "../components/timerEffect";
-import AmiiboList from "../components/apiEffect";
+import TimerSimples from "../components/effectTimer";
+import AmiiboList from "../components/effectApi";
 
 export function Effect () {
   return (
