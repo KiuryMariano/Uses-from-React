@@ -1,4 +1,5 @@
-import  { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from "react";
+import { containerStyle, buttonGroupStyle } from "../components/Layout";
 
 const TimerPausavel = () => {
   const [segundos, setSegundos] = useState(0);
@@ -32,14 +33,17 @@ const TimerPausavel = () => {
   };
 
   return (
-    <div>
-      <h2>Timer: {segundos}s</h2>
-      <button onClick={pausarOuRetomar}>
-        {ativo ? 'Pausar' : segundos > 0 ? 'Retomar' : 'Iniciar'}
-      </button>
-      <button onClick={parar} style={{ marginLeft: '10px' }}>
-        Parar
-      </button>
+    <div style={containerStyle}>
+      <h2>⏯️ Exemplo de useRef: Timer Pausável</h2>
+      <p style={{ fontSize: "1.25rem" }}>
+        Tempo: <strong>{segundos}</strong> segundos
+      </p>
+      <div style={buttonGroupStyle}>
+        <button onClick={pausarOuRetomar}>
+          {ativo ? "⏸️ Pausar" : segundos > 0 ? "▶️ Retomar" : "🟢 Iniciar"}
+        </button>
+        <button onClick={parar}>⏹️ Parar</button>
+      </div>
     </div>
   );
 };

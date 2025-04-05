@@ -3,10 +3,10 @@ import SimpleCalculator from "../components/memoCalculator";
 
 export function Memo() {
   return (
-    <div>
-      <h1>Memo</h1>
-      <SimpleCalculator/>
-      <FilteredList/>
+    <div style={{ padding: "20px" }}>
+      <h2>⚡ Praticando useMemo</h2>
+      <SimpleCalculator />
+      <FilteredList />
     </div>
   );
 }
