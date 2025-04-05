@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { containerStyle, buttonGroupStyle, inputStyle } from "../components/Layout";
 
 export function ArrayState() {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -11,7 +12,7 @@ export function ArrayState() {
   }
 
   return (
-    <div>
+    <div style={containerStyle}>
       <h2>Lista de tarefas</h2>
       <input
         type="text"
@@ -19,13 +20,16 @@ export function ArrayState() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Digite a tarefa..."
         className="border p-2 rounded"
+        style={inputStyle}
       />
-      <button onClick={addTasks}>Adicionar a lista</button>
-      <ol>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ol>
+      <div style={buttonGroupStyle}>
+        <button onClick={addTasks}>Adicionar a lista</button>
+        <ol>
+          {tasks.map((task, index) => (
+            <li key={index}>{task}</li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 }
