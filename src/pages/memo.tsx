@@ -1,10 +1,12 @@
-import ListaFiltrada from "../components/memoList";
+import FilteredList from "../components/memoListFiltered";
+import SimpleCalculator from "../components/memoCalculator";
 
 export function Memo() {
   return (
     <div>
       <h1>Memo</h1>
-      <ListaFiltrada/>
+      <SimpleCalculator/>
+      <FilteredList/>
     </div>
   );
 }

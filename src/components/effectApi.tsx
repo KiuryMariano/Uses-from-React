@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const AmiiboList = () => {
   interface Amiibo {
@@ -12,18 +12,24 @@ const AmiiboList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("🟢 Componente AmiiboList montado");
     // Requisição à API ao montar o componente
-    fetch('https://www.amiiboapi.com/api/amiibo/')
+    fetch("https://www.amiiboapi.com/api/amiibo/")
       .then((response) => response.json())
       .then((data) => {
         setAmiibos(data.amiibo); // Salva os dados recebidos
-        setLoading(false);       // Finaliza o carregamento
+        setLoading(false); // Finaliza o carregamento
       })
       .catch((error) => {
-        console.error('Erro ao buscar dados da API:', error);
+        console.error("❌ Erro ao buscar dados da API:", error);
         setLoading(false);
       });
-  }, []); // Executa apenas uma vez quando o componente é montado
+    return () => {
+      console.log("🔴 Componente AmiiboList desmontado");
+    };
+  }, []);
+
+  // Executa apenas uma vez quando o componente é montado
 
   return (
     <div>

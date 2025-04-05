@@ -4,6 +4,9 @@ const TimerSimples = () => {
   const [tempoRestante, setTempoRestante] = useState(10); // Começa com 10 segundos
 
   useEffect(() => {
+
+    console.log('🟢 Componente montado');
+
     // Se o tempo acabar, não faz mais nada
     if (tempoRestante <= 0) return;
 
@@ -14,6 +17,7 @@ const TimerSimples = () => {
 
     // Função de limpeza que roda ao desmontar o componente ou mudar tempoRestante
     return () => {
+      console.log('🧹 Componente desmontado ou tempo atualizado');
       clearInterval(intervalo);
     };
   }, [tempoRestante]); // Executa toda vez que o tempo muda
